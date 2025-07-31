@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Calculadora de descuentos de gasolina</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página de Descargas</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        .download-link { display: block; margin-1em 0; padding: 0.8em; border: 1px solid #ddd; background-color: #f9f9f9; text-decoration: none; color: #333; border-radius: 5px; }
+        .download-link:hover { background-color: #e9e9e9; }
+    </style>
 </head>
 <body>
-<h1>Calculadora de descuentos de gasolina</h1>
-<form>
-<label for="litros">Cantidad de litros:</label>
-<input type="number" id="litros" name="litros"><br><br>
-<label for="precio">Precio por litro:</label>
-<input type="number" step="0.01" id="precio" name="precio"><br><br>
-<label for="descuento1">Descuento en %:</label>
-<input type="number" step="0.01" id="descuento1" name="descuento1"><br><br>
-<label for="descuento2">Descuento adicional en %:</label>
-<input type="number" step="0.01" id="descuento2" name="descuento2"><br><br>
-<button type="button" onclick="calcular()">Calcular</button>
-<br><br>
-<label for="precio_total">Precio total:</label>
-<input type="text" id="precio_total" name="precio_total" readonly>
-<br><br>
-<label for="precio_descuento">Precio por litro con descuento:</label>
-<input type="text" id="precio_descuento" name="precio_descuento" readonly>
-</form>
-<script>
-function calcular() {
-  var litros = document.getElementById("litros").value;
-  var precio = document.getElementById("precio").value;
-  var descuento1 = document.getElementById("descuento1").value;
-  var descuento2 = document.getElementById("descuento2").value;
-  var precio_con_descuento1 = precio * (1 - descuento1 / 100);
-  var precio_con_descuento2 = precio_con_descuento1 * (1 - descuento2 / 100);
-  var precio_total = litros * precio_con_descuento2;
-  var precio_descuento = precio_con_descuento2.toFixed(2);
-  document.getElementById("precio_total").value = precio_total.toFixed(2);
-  document.getElementById("precio_descuento").value = precio_descuento;
-}
-</script>
+    <h1>Bienvenido a mi página de descargas</h1>
+    <p>Aquí puedes encontrar los archivos para descargar:</p>
+
+    <ul>
+        <li>
+            <a href="https://download.mozilla.org/?product=firefox-esr-msi-latest-ssl&os=win64&lang=es-ES" class="download-link" download>
+                Descargar firefox
+            </a>
+        </li>
+            </ul>
+
+    <p>¡Gracias por visitar!</p>
 </body>
 </html>
-
